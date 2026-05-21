@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مقاديري | مقادير الوجبات</title>
+  <meta name="description" content="مقاديري يوفر مقادير طازجة ومجهزة للطبخ حسب عدد الأشخاص، مع معلومات غذائية مفصلة ووصفة تُرسل بعد الطلب.">
+  <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main class="page-shell">
+
+<section class="container">
+  <div class="page-hero">
+    <div>
+      <h1>مقادير الوجبات</h1>
+      <p>اختر الوجبة المناسبة واستعرض السعر والمكونات الأساسية والقيم الغذائية قبل الطلب.</p>
+    </div>
+
+    <label class="search-wrap">
+      <i data-lucide="search"></i>
+      <input id="meal-search" type="search" placeholder="ابحث عن وجبة أو مكون...">
+    </label>
+  </div>
+
+
+  <div class="filter-row">
+    <div class="chips-wrap">
+      <button class="chip active" type="button" data-category="الكل">الكل</button>
+      <button class="chip" type="button" data-category="سعودي">سعودي</button>
+      <button class="chip" type="button" data-category="غربي">غربي</button>
+      <button class="chip" type="button" data-category="إيطالي">إيطالي</button>
+      <button class="chip" type="button" data-category="آسيوي">آسيوي</button>
+    </div>
+
+    <select class="sort-select" id="sort-select">
+      <option value="popular">الأكثر شيوعًا</option>
+      <option value="low">الأقل سعرًا</option>
+      <option value="prep">وقت التحضير</option>
+    </select>
+  </div>
+
+
+  <div class="meals-layout">
+    <aside class="card sidebar-filter">
+      <h3>وقت التحضير</h3>
+      <div class="filter-group">
+        <label><input type="radio" name="prep" value="" checked> الكل</label>
+        <label><input type="radio" name="prep" value="lt30"> أقل من 30 دقيقة</label>
+        <label><input type="radio" name="prep" value="30to60"> 30–60 دقيقة</label>
+        <label><input type="radio" name="prep" value="gt60"> أكثر من 60 دقيقة</label>
+      </div>
+
+      <h3>نطاق السعر</h3>
+      <div class="filter-group">
+        <label><input type="radio" name="price" value="" checked> الكل</label>
+        <label><input type="radio" name="price" value="10to25"> <span class="range-values">10–25 ريال</span></label>
+        <label><input type="radio" name="price" value="26to40"> <span class="range-values">26–40 ريال</span></label>
+        <label><input type="radio" name="price" value="gt40"> أكثر من <span class="numeric">40</span> ريال</label>
+      </div>
+
+    </aside>
+
+    <section>
+      <div class="results-count" id="results-count"></div>
+      <div class="meals-grid" id="meals-grid"></div>
+    </section>
+  </div>
+
+</section>
+
+</main>
+
+<div id="site-footer"></div>
+<div class="toast-stack"></div>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="js/core/dom.js"></script>
+<script src="js/core/config.js"></script>
+<script src="js/data/meals.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/components/layout.js"></script>
+<script src="js/components/modals.js"></script>
+<script src="js/pages/meals.js"></script>
+<script src="js/pages/home.js"></script>
+<script src="js/pages/cart.js"></script>
+<script src="js/pages/checkout.js"></script>
+<script src="js/pages/meal-details.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
